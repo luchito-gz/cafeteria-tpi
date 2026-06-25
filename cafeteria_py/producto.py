@@ -46,8 +46,9 @@ class Producto(ABC):
 
 
 class Bebida(Producto):
-    def __init__(self, nombre: str, precio: float):
+    def __init__(self, nombre: str, precio: float, acepta_extras: bool = False):
         super().__init__(nombre, precio, "bebida")
+        self.acepta_extras = acepta_extras 
 
     def get_descripcion(self) -> str:
         return self._nombre

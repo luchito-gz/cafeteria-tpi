@@ -81,11 +81,11 @@ class Cafeteria:
 
     def __cargar_menu_inicial(self) -> None:
         bebidas = [
-            Bebida("Café", 1200.0),
-            Bebida("Café con leche", 1500.0),
-            Bebida("Té", 1000.0),
-            Bebida("Jugo de naranja", 1800.0),
-            Bebida("Agua mineral", 800.0),
+            Bebida("Café", 1200.0, acepta_extras = True),
+            Bebida("Café con leche", 1500.0, acepta_extras = True),
+            Bebida("Té", 1000.0, acepta_extras = True),
+            Bebida("Jugo de naranja", 1800.0, acepta_extras = False),
+            Bebida("Agua mineral", 800.0, acepta_extra = False),
         ]
         salados = [
             Salado("Medialunas x3", 1400.0),

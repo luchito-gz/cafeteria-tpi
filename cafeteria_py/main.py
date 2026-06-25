@@ -133,7 +133,7 @@ def agregar_producto(pedido: Pedido) -> None:
 
     elegido: Producto = lista[num - 1]
 
-    if categoria == "bebida":
+    if categoria == "bebida" and getattr(elegido, "acepta_extras", False):
         elegido = ofrecer_extras(elegido)
 
     pedido.agregar_producto(elegido)
